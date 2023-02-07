@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/mohuishou/protoc-gen-go-gin/example/api/product/app/v1";
+option go_package = "github.com/liangjisheng/protoc-gen-go-gin/example/api/product/app/v1";
 
 package product.app.v1;
 
@@ -25,16 +25,16 @@ service BlogService {
 }
 
 message GetArticlesReq {
-	// @inject_tag: form:"title"
+	// @gotags: form:"title"
 	string title = 1;
 
-	// @inject_tag: form:"page"
+	// @gotags: form:"page"
 	int32 page = 2;
 
-	// @inject_tag: form:"page_size"
+	// @gotags: form:"page_size"
 	int32 page_size = 3;
 
-	// @inject_tag: form:"author_id" uri:"author_id"
+	// @gotags: form:"author_id" uri:"author_id"
 	int32 author_id = 4;
 }
 
@@ -46,6 +46,6 @@ message GetArticlesResp {
 message Article {
 	string title  = 1;
 	string content = 2;
-	// @inject_tag: form:"author_id" uri:"author_id"
+	// @gotags: form:"author_id" uri:"author_id"
 	int32 author_id = 3;
 }

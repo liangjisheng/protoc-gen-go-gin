@@ -1,5 +1,5 @@
 gen_example:
-	go install
+	#go install
 	protoc -I ./example/api \
 	--openapiv2_out ./example/api --openapiv2_opt logtostderr=true \
 	--openapiv2_opt json_names_for_fields=false \
